@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(to right, #020024, #00d4ff);
+    background: url('https://images.unsplash.com/photo-1530273883449-aae8b023c196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsdWUlMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80') no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+h1 {
+    margin: 0;
+    text-align: center ;
+}
+.login {
+    display: inline-block;
+    text-align: left;
+    background-color: #ffffffc2;
+    border-radius: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    width: 70%;
+    max-width: 450px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+
+}   
+.txt-field {
+    box-sizing: border-box;
+    margin-bottom:  20px;
+}
+
+form {
+    padding: 30px;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+
+/* pseudo elements */
+
+#username-wrapper {
+    position: relative;
+    /* border: 1px solid blue; */
+}
+
+#password-wrapper {
+    position: relative;
+}
+
+input {
+    padding: 10px 12px;
+    background: none;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;   
+    box-sizing: border-box; 
+    outline: none;
+}
+input:focus {
+    border: 1px solid #367aab;
+}
+
+.btn-wrapper {
+    text-align: right;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+    padding: 10px 24px;
+    margin-left: auto;
+    position: relative;
+    background: #367aab;
+    color: white;
+    border-radius: 5px;
+}
+
+
+small {
+
+color: #367aab;
+
+}
+
+#username-wrapper.focused::before {
+    top: -12px !important;
+    left: 5px !important;
+    color: #367aab !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    
+}
+#password-wrapper.focused::before {
+    top: -12px !important;
+    left: 5px !important;
+    color:#367aab !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+}
+
+#username-wrapper::before {
+    content: 'Username';
+    position: absolute;
+    color: #777;
+    z-index: 0;
+    font-size: 14px;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    transition: 300ms ease;
+}
+
+#password-wrapper::before {
+    content: 'Password';
+    position: absolute;
+    color: #777;
+    z-index: 0;
+    font-size: 14px;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    transition: 300ms ease;
+}
+
+input:focus::before {
+    top: 0;
+}
+
+
+.spacer {
+    height: 30px;
+    width: 100% ;
+}
